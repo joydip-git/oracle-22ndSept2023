@@ -149,6 +149,38 @@ CSS:
 	outline styles are over-written by in-line styles
 
 	browser style > outline styles > inline style
+
+
+	Application Development Server:
+	a web server s/w in your machine that can hots your application and load the web application contents on the browser
+	this type of web server can receive request from the same machine
+	it hosts the web application using a different port number (not 80)
+
+	Live Server => app dev server
+
+
+JavaScript:
+	where to write? 
+		- in the HTML file or 
+		- in separate file with .js as extension (recommended)
+
+	commentts in JS:
+	a. single line comment: //code
+	b. multiple line comment: /* code */
+
+	basics of JavaScript:
+	a. data types
+	b. operators
+	c. control flow statements
+	d. array in JS
+	e. JS with DOM
+
+
+news-articles
+article_id(pk)	article-title	article_image_path	article_image
+-----------------------------------------------------------------------
+1		ghvhjbkjkjnkkl	images/1.jpg		asedr134shgvjhh654655765fchgcgvkjn
+2		ghvhjbkjkjnkkl	images/2.jpg
 	
 	
 		

@@ -1,0 +1,23 @@
+.btn {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: blueviolet;
+  border-style: solid;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 50px;
+  width: 100px;
+  padding: 5px;
+  margin-left: 40px;
+}
+.div {
+  background-color: chartreuse;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 40px;
+  margin-top: 40px;
+  font-size: large;
+  font-weight: bold;
+  color: brown;
+}
