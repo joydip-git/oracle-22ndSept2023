@@ -1,0 +1,70 @@
+/* element-name selector */
+/*
+        p,
+        footer,
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: brown;
+        }
+
+        header {
+            background-color: aqua;
+        }
+
+        h1 {
+            background-color: burlywood;
+        }
+
+        p {
+            background-color: azure;
+        }
+
+        footer {
+            background-color: blanchedalmond;
+        }
+        */
+/* id selector */
+/*
+        #introPara,
+        footer,
+        h1 {
+            background-color: azure;
+            font-family: 'Courier New', Courier, monospace;
+            color: brown;
+        }
+
+
+        #introHeader,
+        #continuePara {
+            background-color: aqua;
+        }
+
+        h1 {
+            background-color: burlywood;
+        }
+
+        footer {
+            background-color: blanchedalmond;
+        }
+        */
+
+.common {
+  font-family: "Courier New", Courier, monospace;
+  color: brown;
+}
+
+.header-color {
+  background-color: aqua;
+}
+
+.footer-color {
+  background-color: blanchedalmond;
+}
+
+.h1-color {
+  background-color: burlywood;
+}
+
+.para-color {
+  background-color: beige;
+}

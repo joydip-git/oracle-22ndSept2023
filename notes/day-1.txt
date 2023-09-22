@@ -38,6 +38,18 @@ HTML:
 
 	<p> sentences </p>
 
+	what is content inside a tag?
+	a tag can contain
+		- another tag
+		- textual value
+		- mix of both
+
+	
+	<body>
+		Welcome....
+		<h1> Welcome </h1>	
+	</body>
+
 	note:
 	empty tags: some tag do not have closing tag, as there will be no content inside that tag. these are known as empty tags or self closing tag.
 	<tag-name> or <tag-name />
@@ -64,6 +76,81 @@ HTML:
 
 	b. body:
 		this section or tag contains actual design of the web page
+
+
+	HTML comment:
+	<!-- commented code -->
+
+	The way content is organized, depending on that there are 2 types of elements (atgs) in HTML:
+	a. inline elements: span
+	b. block elements: p, div
+
+	semantic elements: p, div, header etc.
+
+
+CSS:
+	css-property-name:value
+	background-color:burlywood
+	color:blue
+	font-family:consolas
+
+	CSS comments:
+	/* styles */
+
+	applying styles:
+	a. inline style: applying style using style attribute on an element
+	<tag-name style="background-color:burlywood;color:blue;font-family:consolas"></tag-name>
+	disadvantage: 
+		- common style that you would like to apply on multiple elements have to be written for every element repeatedly.
+		- style and actual HTML design are written together
+
+	b. outline style: provide the style using separate style tag and apply the styles on elements
+	advantage:
+		- common style is written once but applied on one or many elements
+		- style code and actual HTML design are separated, resulting in clean code
+
+	
+	b.i. element selector:
+	<style>
+		element-name1, element-name2{
+			css-prop-nam1:value;
+			css-prop-nam2:value;
+			css-prop-nam3:value;
+			........
+		}
+		element-name{
+			css-prop-nam1:value;
+			css-prop-nam2:value;
+			..............
+		}
+	</style>
+	disadvantage:
+		- if you want to apply different styles on multiple instances of same tag on the page, that will be difficult, as the element selector says, any instance of a tag will have the same style
+
+	b.ii. id selector: applying style on element(s) using their unique id
+	note: using id attribute of any HTML element you can provide an unique id. no two elements on a page should have same id value.
+
+	common disadvantage of both id and element selector:
+	you have to decide the name of or id of all the elements from the begining, on which you have to apply styles. If you update/change the design you have to also update the styles done using element and id selector.
+
+	b.iii. class selector: create a set of CSS styles (known as class) and decide in the HTML deisgn whether to apply the set of styles on the individual element(s) or not. from the begining while creating the styles, you DON'T need to mention any name or id of element(s).
+
+	common disadvantage of both inline and outline style:
+	you are writing the style code inside an HTML file which is meant to have only HTML code, and this way your page becomes a spagetti page and a fat page
+
+	solution: create a separate file for CSS code and link the file with HTML file
+	extension: *.css
+	link: use link tag to link the .css file with .htm/.html file
+	note: since <link> empty tag is used to link different types of files, hence use the "rel" attribute to mention which type of asset/file you are linking with the HTML file
+
+
+	precedence of styles:
+	browser applies some default styles on any web page, which will be over-written if you have used outline or in-line style
+	outline styles are over-written by in-line styles
+
+	browser style > outline styles > inline style
+	
+	
 		
 			
 

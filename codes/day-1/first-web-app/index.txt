@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="joydip">
+    <meta name="http-equiv" content="5">
+    <title>
+        Oracle Home Page
+    </title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/html5-icon.png" alt="NA" title="HTML 5">
+        <h1>Welcome to HTML Home Page</h1>
+        <h4>HyperText Mark-up Language</h4>
+    </header>
+    <!-- commented code -->
+    <!--
+    <h2>Welcome to Oracle Home Page</h2>
+    <h3>Welcome to Oracle Home Page</h3>
+    <h4>Welcome to Oracle Home Page</h4>
+    <h5>Welcome to Oracle Home Page</h5>
+    <h6>Welcome to Oracle Home Page</h6>
+    -->
+    <p>
+    <pre>
+            HTML is the standard markup language for Web pages.
+            With HTML you can create your own Website.
+            HTML is easy to learn - You will enjoy it!
+       </pre>
+    </p>
+    <p>
+        In this HTML tutorial, you will find more than 200 examples. With our online "Try it Yourself" editor, you can
+        edit and test each example yourself!
+    </p>
+
+    <div>
+        <header>
+            <h3>Introduction to HTML</h3>
+        </header>
+        <p>
+            HTML is the standard markup language for Web pages.
+            <br>
+            With HTML you can create your own Website.
+            <br>
+            HTML is easy to learn - You will enjoy it!
+        </p>
+    </div>
+
+    <div>
+        <span>UserName: </span>
+        <input type="text">
+    </div>
+    <div>
+        <span>Password</span>
+        <input type="password">
+    </div>
+
+    <footer>
+        Copyright &copy; Oracle, 2023
+    </footer>
+</body>
+
+</html>
