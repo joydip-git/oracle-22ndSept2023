@@ -20,3 +20,55 @@ Editors:
 
 Integrated Development Environment (IDE):
 	Visual Studio Code, WebStorm, Atom, SublimeText, Visual Studio, Eclipse, Netbeans etc.
+
+
+HTML:
+	provides lots of built-in tags (elements) to create web page design
+
+	tag: a specific structural way to render any content
+	a tag looks like the following: 
+	<tag-name>  <-- openning tag
+		content
+	</tag-name> <-- corrseponding closing tag
+	H tag => h1, h2, h3, h4, h5, h6
+	
+	<h1>
+		Welcome to Oracle Home Page	
+	</h1>
+
+	<p> sentences </p>
+
+	note:
+	empty tags: some tag do not have closing tag, as there will be no content inside that tag. these are known as empty tags or self closing tag.
+	<tag-name> or <tag-name />
+	example: meta, br, hr etc.
+
+	attribute:
+	it is name and value pair. it is used to provide extra information or define extra characterestics of any HTML tag.
+	syntax: <tag-name attr-name="attr-value"></tag-name>
+		<tag-name attr-name="attr-value">
+	
+	any HTML file should start with HTML tag. entire web page design should be inside the openning and closing HTML tag.
+	<html>
+	</html>
+
+	any HTML file is divided into two parts: head and body
+	a. head: it contains all the information about an HTML file. those information are placed into openning and closing head tag, i.e. <head></head>
+	information:
+		title of the web page: using <title></title>
+
+		using <meta> tag:
+		author of the web page
+		which encoding mechanism should be used to encode entire web page content 
+		how this web page will be displayed on a device and make the web page responsive [viewport: a logical area of display in a physical device]
+
+	b. body:
+		this section or tag contains actual design of the web page
+		
+			
+
+
+
+
+
+
