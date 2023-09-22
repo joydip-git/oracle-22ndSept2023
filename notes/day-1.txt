@@ -1,0 +1,22 @@
+HTML, CSS and JavaScript:
+	used to develop web pages and to create web application
+
+1. HTML: (Noun)
+	Hyper Text Mark-up Language
+	used to design a web page
+	using HTML you can create static web page
+
+2. CSS: (Adjective)
+	Cascading Style Sheet
+	used to provide styles for the elements on the web page and the web page
+
+3. JavaScript: (Verb)
+	a programming language or scripting language
+	used to provide user inter actvitiy from the web page and to make the web page dynamic
+	when you use JavaScript to handle the events, load data on page, then the page becomes dynamic
+
+Editors:
+	Notepad, Notepad++ etc.
+
+Integrated Development Environment (IDE):
+	Visual Studio Code, WebStorm, Atom, SublimeText, Visual Studio, Eclipse, Netbeans etc.
