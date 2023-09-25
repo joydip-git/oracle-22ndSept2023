@@ -2,7 +2,7 @@ create a Java application to calculate salary of any employee
 
 name of the application: PayrollApp
 
-entity:
+entities:
 class: employee
 employee entity structure:
 	attributes: name, id, basic payment, da payment, hra payment
@@ -11,15 +11,33 @@ employee entity structure:
 		argumnets: 	none
 		return type: 	double/float
 
+child class#1:
+Hr entity structure:
+	attributes: name, id, basic payment, da payment, hra payment, gratuity payment
+	functionalities: 
+		name: 		calculateSalary [b+d+h+g]
+		argumnets: 	none
+		return type: 	double
+
+child class#2:
+Developer entity structure:
+	attributes: name, id, basic payment, da payment, hra payment, incentive payment
+	functionalities: 
+		name: 		calculateSalary [b+d+h+i]
+		argumnets: 	none
+		return type: 	double
+
 
 UI:
 	a. ask user how many employee instances/records to be created
 	b. create that many employee instances (accept all the attribute values from user)
+		i. print menu for user so that user can choose which type of object to be created
+		ii. based on the choice you create that type of employee object (either hr or developer)
 	c. save every instance of employee in an array
 	d. iterate through the array and calculate salary of every instance and print the same
 
 Note: 
-*: the class containing main method and the class for employee type should be present in different packages in the application
+*: the class containing main method and the class for employee types should be present in different packages in the application
 **: every data member must have getter and setter.
 ***: the class must have default and parameterized constructor
 ****: do not write entire code in main method. create small functions for individual task.
