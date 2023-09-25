@@ -1,0 +1,10 @@
+1. Business logic	
+	=> calculations
+2. UI (presentation) logic
+	=> accepting value from user or printing something to user
+
+SOLID principle:
+S => single responsibility
+	one class should be used for once purpose. every class has their own purpose
+	Calculation => provide methods for calculation
+	App => privide methods for user interaction
