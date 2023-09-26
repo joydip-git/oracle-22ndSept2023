@@ -74,3 +74,18 @@ class C implements A, B{
 C obj = new C();
 obj.foo();
 
+
+what is finalize (method) in java class?
+
+all classes in Java do inherit from Object class (java.lang package)
+
+getClass() => Class<?>
+toString() => String can override
+equals(object obj) => boolean can override
+hashCode() => int can override
+protected void finalize(){}
+
+garbage collector calls this method before destroying any java class object, so that, if that Java class was using any resource (database connection, file connection, scanner etc.), that resource can be deallocated/released
+finalize method does get called by GC only when the object needs to be destroyed. so any resource used by the class will be released much later.
+
+

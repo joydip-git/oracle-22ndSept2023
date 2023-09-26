@@ -33,7 +33,7 @@ UI:
 	b. create that many employee instances (accept all the attribute values from user)
 		i. print menu for user so that user can choose which type of object to be created
 		ii. based on the choice you create that type of employee object (either hr or developer)
-	c. save every instance of employee in an array
+	c. save every instance of employee in an array [make sure you adding only unique objects of employee type in the array - just check whether employees do have the same id or not. i.e, in the array only employees with unique id should be allowed to be added]
 	d. iterate through the array and calculate salary of every instance and print the same
 
 Note: 

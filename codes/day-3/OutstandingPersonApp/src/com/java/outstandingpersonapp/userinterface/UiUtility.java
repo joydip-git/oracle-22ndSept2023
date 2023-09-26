@@ -88,4 +88,17 @@ public final class UiUtility {
 		System.out.println("\n2. create object of Professor");
 	}
 
+	/*
+	@Override
+	// protected void finalize() throws Throwable {
+	public void finalize() throws Throwable {
+		System.out.println("cleaning up resource");
+		super.finalize();
+		scanner.close();
+	}
+	*/
+	
+	public static void dispose() {
+		scanner.close();
+	}
 }

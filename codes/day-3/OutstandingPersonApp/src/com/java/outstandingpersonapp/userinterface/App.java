@@ -14,9 +14,11 @@ public class App {
 		// 3. create one instance of either Student or Professor at a time, based on
 		// user choice and save the same in the array
 		UiUtility.savePersonInStorage(people);
-		
+
 		// 4. iterate through the array and check which person is outstanding and then
 		// display the information of that person only
 		UiUtility.printOustandingPeople(people);
+
+		UiUtility.dispose();
 	}
 }

@@ -9,6 +9,7 @@ import com.java.shapecalculatorapp.entities.Triangle;
 public final class UiUtility {
 
 	private static Scanner scanner;
+	
 	static {
 		scanner = new Scanner(System.in);
 	}
