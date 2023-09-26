@@ -1,0 +1,30 @@
+1. what is static block?
+executed only once
+initialize static data members of the class
+
+2. final keyword?
+
+final data member and variable: to declare a variable and data member, whose value once assigned, can't be changed
+
+final class: a class declared with final keyword can't be inherited further
+
+final method: a method declared with final keyword can't be overriden in the child class
+
+3. what is abstract method and class?
+a method without definition but only with declaration is known as abstract method
+a class with at least one abstract method is abstract class
+the abstract class should be inherited in child class and the abstract methods must be implemented in that child class
+any type of data is/are allowed
+you can write any constructor explicitly inside abstract class
+you can't instantiate an abstract class
+an abstract class type reference variable can store reference of its child class instance
+
+4. what is interface?
+a collection of abstract methods only. No non-abstract methods are allowed
+used for abstraction (what to hide and what to expose)
+interface members are by default - abstract and public. Don't use those keywords.
+ONLY final or static final type of data is/are allowed
+you can't write any constructor explicitly inside interface
+the interface should be implemented in child class and the abstract methods must be implemented in that child class
+you can't instantiate an interface
+an interface type reference variable can store reference of its child class instance
