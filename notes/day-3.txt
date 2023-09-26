@@ -28,3 +28,49 @@ you can't write any constructor explicitly inside interface
 the interface should be implemented in child class and the abstract methods must be implemented in that child class
 you can't instantiate an interface
 an interface type reference variable can store reference of its child class instance
+
+
+multiple inheritance:
+
+class A{
+	public void foo(){ //code }
+	public void foo1(){}
+}
+class B{
+	public void foo(){ //code}
+	public void foo2(){}
+}
+class C:A, B{
+	
+}
+
+
+C obj = new C();
+obj.foo();
+
+
+interface A{
+	void foo();
+	void foo1();
+}
+
+interface B{
+	void foo();
+	void foo2();
+}
+
+class C implements A, B{
+	@Override
+	public void foo(){ //code }
+
+	@Override
+	public void foo1(){ //code }
+
+	@Override
+	public void foo2(){ //code }
+	
+}
+
+C obj = new C();
+obj.foo();
+
