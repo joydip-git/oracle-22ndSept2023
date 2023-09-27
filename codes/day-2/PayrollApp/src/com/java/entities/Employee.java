@@ -64,4 +64,17 @@ public class Employee {
 		return basicPayment + daPayment + hraPayment;
 	}
 
+	@Override
+	public boolean equals(Object arg0) {
+		if (this == arg0) {
+			return true;
+		}
+
+		if (arg0 instanceof Employee) {
+			Employee other = (Employee) arg0;
+			return this.id == other.id;
+		} else
+			return false;
+	}
+
 }

@@ -19,7 +19,8 @@ public class App {
 
 	private static void printEmployeeSalary(Employee[] employees) {
 		for (Employee employee : employees) {
-			System.out.println(employee.getName() + " has got salary of " + employee.calculateSalary());
+			if (employee != null)
+				System.out.println(employee.getName() + " has got salary of " + employee.calculateSalary());
 		}
 	}
 
@@ -27,8 +28,46 @@ public class App {
 		for (int i = 0; i < employees.length; i++) {
 			printMenu();
 			int choice = getChoice(sc);
-			employees[i] = createEmployee(choice, sc);
+			Employee employee = createEmployee(choice, sc);
+			// boolean doesExist = doesEmployeeExist(employee.getId(), employees);
+			boolean doesExist = doesEmployeeExist(employee, employees);
+			if (!doesExist)
+				employees[i] = employee;
+			else
+				System.out.println("employee with " + employee.getId() + " already exists");
 		}
+	}
+
+	// in this case you need to override equals() method in Employee class
+	private static boolean doesEmployeeExist(Employee other, Employee[] employees) {
+		boolean status = false;
+		if (employees.length > 0) {
+			for (Employee current : employees) {
+				if (current != null) {
+					if (current.equals(other)) {
+						status = true;
+						break;
+					}
+				}
+			}
+		}
+		return status;
+	}
+
+	// in this case there is no need to override equals() method in Employee class
+	private static boolean doesEmployeeExist(int id, Employee[] employees) {
+		boolean status = false;
+		if (employees.length > 0) {
+			for (Employee employee : employees) {
+				if (employee != null) {
+					if (employee.getId() == id) {
+						status = true;
+						break;
+					}
+				}
+			}
+		}
+		return status;
 	}
 
 	private static Employee createEmployee(int choice, Scanner sc) {
