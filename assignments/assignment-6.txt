@@ -1,0 +1,55 @@
+Exception Handling in Banking Application
+A very simple banking application should allow account creation, transfer funds between accounts.
+While doing these operations many abnormalities may occur and to make your application a ro-bust one is a challenging task.
+
+A. Objective 
+Write a hierarchy of custom exception class and to funnel the exceptions. 
+
+B. Problem Statement
+
+Create an Account class that contains the following information: 
+Account number, name of account holder and balance.
+The Account class should allow the following operations:
+
+1)	Deposit
+a.	It should throw InvalidAmountException, if user tries to deposit amount less than or equal to zero.
+b.	The balance should get updated if user enters a valid amount
+
+2)	Withdraw
+a.	Should update the balance if an valid amount is entered
+b.	Should throw InvalidAmountException, if user tries to withdraw amount less than or equal to zero.
+c.	Should throw InsufficientBalanceException, if the user tries to withdraw an amount which is greater than existing balance.
+
+3)	Balance inquiry.
+a.	Should return the existing balance in the account
+
+Now, create a Bank Service class with following functionalities
+
+1)	Create an Account
+a.	On successful creation the account should be stored into a static data.
+b.	If account creation fails should throw AccountCreationException.
+c.	Reasons why account creation should fail
+	i.	Initial amount for account creation is less than 500.
+	ii.	Account Number already exists
+	iii.	Name not provided
+
+2)	Transfer funds between two accounts
+a.	On successful transfer of funds the balance should get updated in both the ac-counts. 
+b.	On failure should throw AccountTransactionException
+c. Reasons why Transaction fails
+	i.	InvalidAmountException
+	ii.	InsufficientBalanceException
+
+d.	Need to log all the transaction attempts (i.e, Debit from account, Credit to ac-count and the amount) irrespective of successful transaction or even for failure cases also.
+
+The main application using these two classes should work with the following try, catch 
+1)	try { 
+// invoke Bank Service code here
+} catch(BankingApplicationException exception) { }
+The main code should also work for the following try, catch blocks
+2)	try {
+// invoke Bank Service code here
+} catch(AccountCreationException exception) { }
+3)	try {
+// invoke Bank Service code here
+} catch(AccountTransactionException exception) { }
