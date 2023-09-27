@@ -68,4 +68,104 @@ errors:
 	declare the method inside the class, which throws exception object, with throws keyword to mention the kind of exception your are throwing or wrap you exception throwing code inside try...catch block and handle it
 	wherever you are calling that method, either use try...catch to catch the exception, or if you want to further propagate the exception, then that caller method also should be having throws declaration
 
+	Collection:
+	a. different collection classes
+	b. sorting in collection classes
+	c. importance of overriding equals and hashCode methods
+	d. different collection interfaces
+
+	Collection vs array
+	
+	disadvantages of an array
+	 - fixed size, not dynamic
+
+	collection classes - provides facilities to store and manipulate a certain group of objects
+	- dynamic, no fixed size
+	- different collection classes for different necessity
+
+	types of collection classes: List, Queue, Set and Map
+
+	int[]
+
+interface:	Iterable
+interface:		Collection
+interface:			List
+				Queue
+				Set
+	
+interfaces: 	a. List				b. Queue			c. Set
+			ArrayList			PriorityQueue			HashSet
+			LinkedList--------------------->Deque (interface)		LinkedHashSet
+			Vector					ArrayDeque		SortedSet(interface)
+				Stack								TreeSet
+
+		d. Map (interface)
+			SortedMap (interface)
+				TreeMap
+			HashMap
+				LinkedHashMap
+
+Top level 2 interfaces	
+interface Iterable{}
+interface Collection extends Iterable{}
+
+2nd level interfaces:
+interface List extends Collection{}
+interface Queue extends Collection{}
+interface Set extends Collection{}
+
+List types:
+class ArrayList implements List{}
+class LinkedList implements List, Deque{}
+class Vector implements List{}
+class Stack extends Vector{}
+
+Set types:
+class PriorityQueue implements Queue{}
+interface Deque extends Queue{}
+class ArrayDeque implements DeQue{}
+
+Queue types:
+class HashSet implements Set{}
+class LinkedHashSet implements Set{}
+interface SortedSet extends Set{}
+class TreeSet implements SortedSet{}
+
+Map types:
+interface Map{}
+interface SortedMap extends Map{}
+class HashMap implements Map{}
+
+class TreeMap implements SortedMap{}
+class LinkedHashMap extends HashMap{}
+
+//Type parameter-->E
+interface List<E>{
+	boolean add(E element); 
+}
+class ArrayList<E> implements List<E>{
+	private static index =0;
+	private E[] arr = new E[4];
+
+	@Override
+	public boolean add(E element){
+		if(index == arr.length){
+			E[] temp = new E[arr.length];
+			//copy all the values from arr to temp
+			arr = new E[arr.length*2];
+			//copy all the values from temp back to arr
+		}
+
+		arr[index]=element;
+		index++;
+	}
+}
+
+new ArrayList<Integer>();
+
+1. find out a way/ways to sort the list of people
+2. read about Set (HashSet) and Map (HashMap and TreeMap)
+
+
+
 
