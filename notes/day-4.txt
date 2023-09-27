@@ -1,0 +1,57 @@
+Exception handling
+--------------------------
+errors:
+	compile time error
+	runtime error:
+
+	int[] arr = new int[2];
+	for(int i = 0; i< arr.length+1;i++){
+		system.out.println(arr[i]);
+	}
+
+	the exception object is created by JVM
+	ArrayIndexOutOfBoundsException ex = new ArrayIndexOutOfBoundsException(".....");
+
+	the JVM throws the reference of that exception object
+	you should catch the exception object reference
+
+	
+	try block must be followed by one or more than one catch block
+	finally block: any code placed inside finally block will always be executed.
+	finally block must be put after try...catch or directly after try block, if catch does not exist
+	only one finally can be used with one try...catch
+
+	possible correct combination:
+	try...catch
+	try...catch...finally
+	try...finally
+
+	incorrect:
+	individual try block [try block can't exist alone]
+	individual catch block [catch block can't exist alone]
+	individual finally block [finally block does not exist alone]
+	catch..finally
+
+	nesting:
+	try{
+		//code
+		try{}catch(){}finally{}
+	}catch(....){
+		try{}catch(){}finally{}	
+	}finally{
+		try{}catch(){}finally{}
+	}
+ 
+
+	Note:
+	1. try to catch exception using a catch block with corresponding type of exception class
+	2. if you are not sure, then also put a catch block with super class Exception, but the catch block with super class Exception should be the last one in series of catch blocks
+
+
+	exceptions in Java:
+	exception:
+		checked: these type of exceptions are checked during compilation time. ex: IOException, SQLException etc.
+		unchecked: these type of exceptions are not checked during compile time, rather they are detected during runtime directly. ex: all runtime exceptions
+	error: irrecoverable (it is a type of unchecked exception)
+	
+
