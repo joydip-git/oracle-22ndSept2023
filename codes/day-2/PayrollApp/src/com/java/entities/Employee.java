@@ -1,5 +1,7 @@
 package com.java.entities;
 
+import java.util.InputMismatchException;
+
 public class Employee {
 
 	private int id;
@@ -15,9 +17,13 @@ public class Employee {
 		super();
 		this.id = id;
 		this.name = name;
-		this.basicPayment = basicPayment;
-		this.daPayment = daPayment;
-		this.hraPayment = hraPayment;
+		/*
+		 * this.basicPayment = basicPayment; this.daPayment = daPayment; this.hraPayment
+		 * = hraPayment;
+		 */
+		this.setBasicPayment(basicPayment);
+		this.setDaPayment(daPayment);
+		this.setHraPayment(hraPayment);
 	}
 
 	public int getId() {
@@ -41,7 +47,12 @@ public class Employee {
 	}
 
 	public void setBasicPayment(double basicPayment) {
-		this.basicPayment = basicPayment;
+		try {
+			if (isPostiveeValue(basicPayment))
+				this.basicPayment = basicPayment;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	public double getDaPayment() {
@@ -49,7 +60,12 @@ public class Employee {
 	}
 
 	public void setDaPayment(double daPayment) {
-		this.daPayment = daPayment;
+		try {
+			if (isPostiveeValue(daPayment))
+				this.daPayment = daPayment;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	public double getHraPayment() {
@@ -57,7 +73,14 @@ public class Employee {
 	}
 
 	public void setHraPayment(double hraPayment) {
-		this.hraPayment = hraPayment;
+//		if (isPostiveeValue(hraPayment))
+//			this.hraPayment = hraPayment;
+		try {
+			if (isPostiveeValue(hraPayment))
+				this.hraPayment = hraPayment;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	public double calculateSalary() {
@@ -77,4 +100,12 @@ public class Employee {
 			return false;
 	}
 
+	public boolean isPostiveeValue(double value) {
+		if (value < 0) {
+			System.out.println(value);
+			InputMismatchException e = new InputMismatchException("no negative value allowed");
+			throw e;
+		}
+		return true;
+	}
 }
