@@ -54,4 +54,18 @@ errors:
 		unchecked: these type of exceptions are not checked during compile time, rather they are detected during runtime directly. ex: all runtime exceptions
 	error: irrecoverable (it is a type of unchecked exception)
 	
+	create custom exception class:
+	-------------------------------------------------------------------
+	create a class (naming convention: use the word "Exception" as suffix to the class name)
+	inherit from Exception class (base)
+	write a default constructor 
+	write at least one parameterized constructor which will accept an error message of type String and then by-pass the error message to base class parameterized constructor using super keyword
+
+	usage of custom exception class:
+	-------------------------------------------------------------------
+	create an instance of the custom exception class wherever necessary. 
+	then throw the exception class instance
+	declare the method inside the class, which throws exception object, with throws keyword to mention the kind of exception your are throwing or wrap you exception throwing code inside try...catch block and handle it
+	wherever you are calling that method, either use try...catch to catch the exception, or if you want to further propagate the exception, then that caller method also should be having throws declaration
+
 
