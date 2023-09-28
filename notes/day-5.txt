@@ -1,0 +1,24 @@
+Sorting:
+	List<Integer> => Collections.sort(list)
+
+	class Integer implements ???
+
+	a. sorting logic can be written inside the type (internalization)
+		your type (Person class) must implement Comparable<T> from java.lang package (ex: Comparable<Person>) interface and its method "int compareTo(T o)"
+		compareTo: write such a logic for comparison between two objects of the same type, so that the method returns
+		 0: both the objects are same
+		>0: first object is greater than second object
+		<0: second object is greater than first object
+
+	issues: 
+	i. if the author of type (Person class) has not implemented the Comparable interface. hence, the you can't sort the collection using Collections.sort(list-of-items) method
+	ii. what to do in case of choice based sorting, as the choice value has to be passed inside the type (Person class)
+	
+	b. sorting can be written outside the type (externalization)
+		you have to create a new type (ex: PersonComparer class) and implement Comparator<T> interface (from java.util package) and its method "int compare(T o1, T o2)" (Comparator<Person> => int compare(Person o1, Person o2))
+		compare: write such a logic for comparison between two objects of the same type, so that the method returns
+		 0: both the objects are same
+		>0: first object is greater than second object
+		<0: second object is greater than first object
+	
+		

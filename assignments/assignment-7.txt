@@ -1,0 +1,13 @@
+Create a Java application-
+	with a class Customer (id, name, location, mobile)
+	create an unique collection of Customer objects (at least 3)
+	print all the objects from the collection and this time by default the collection should be sorted by customer name
+
+	after that print a menu to the user with choices for sorting
+	now, sort the Customers collection based on choice from user
+		1 => sort by customer id
+		2 => sort by customer name
+		3 => sort by location
+		4 => sort by mobile
+	now print the collection of customers where the customer class objects are sorted based on the choice by user
+	
