@@ -1,0 +1,31 @@
+Create a Java application to find out every word in a string and its occurrences and display the word and its occurrences in sorted manner (sorted alphabetically by the words)
+
+sample sentence:
+Java is a programming language, I use Java for coding in any application.
+
+sample output:
+a:1
+any:1
+application:1
+coding:1
+for:1
+...
+Java:2
+
+class <name>{
+	public static void main(....){
+		//ask user to enter any sentence
+		//pass the sentence to getWordsAndCount method
+		//print the words and their count from the returned collection
+	}
+
+	public <return-type> getWordsAndCount(String sentence){
+		//code
+		//return collection of words and count for each
+	}
+}
+
+Now, write unit test cases to check whether the functionality works properly or not
+
+
+

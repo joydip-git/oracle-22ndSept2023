@@ -1,4 +1,4 @@
-Sorting:
+	Sorting:
 	List<Integer> => Collections.sort(list)
 
 	class Integer implements ???
@@ -28,6 +28,9 @@ Sorting:
 	3. if the hash value is found to be same as that of other element, immediately the Set calls another method, equals() on one element and passes the other element to check whether they are really same or not
 	4. if the equals() method returns true, that means both the elements (old and the new) are same and the new element is not added
 
+
+	Set:
+
 	Set<Integer> set = new HashSet<Integer>();
 	set.add(12); //calculates hash code => Integer.hashCode(12);
 	set.add(12); //calculates hash code => Integer.hashCode(12); and it finds the has code is same for old and the new element
@@ -54,9 +57,85 @@ Sorting:
 	iii. additionally it will sort the elements.
 	note: for sorting purpose, you have to implement Comparable<T> interface and its method compareTo(T arg0) in the element (T)
 
-
-	Map: HashMap and TreeMap
+	Map:
+	HashMap and TreeMap
 	HashMap<Integer,Person> map = new HashMap<>();
 	map.put(62474,sunilPerson);
+
+	interface Map<TKey, TValue>{
+		void put(TKey key, TValue value);
+	}
+
+	class HashMap<> implements Map<TKey, TValue>{
+		static class Entry<TKey, TValue>{
+			private TKey key;
+			private TValue value;
+
+			public Entry(TKey key, TValue value){
+				this.key = key;
+				this.value = value;
+			}
+			public TKey getKey(){ return key;}
+			public TValue getValue(){ return value;}
+
+			public int hashCode(){
+				return key.hashCode();
+			}
+			public boolean equals(TKey other){
+				return key.equals(other);
+			}
+			
+		}
+
+		private Set<Entry<TKey, TValue>> entries;
+		public HashMap(){
+			entries = new HashSet<Entry>();
+		}
+		public void put(TKey key, TValue value){
+			Entry<TKey, TValue> entry = new Entry<TKey, TValue>(key,value);
+			entries.add(entry);
+		}
+		public Set<Entry<TKey, TValue>> entrySet(){
+			return entries;
+		}
+	}
+
+	interface SortedMap<TKey, TValue> extends Map<TKey, TValue>{}
+
+	class TreeMap<> implements SortedMap<TKey, TValue>{
+		static class Entry<TKey, TValue>{
+			private TKey key;
+			private TValue value;
+
+			public Entry(TKey key, TValue value){
+				this.key = key;
+				this.value = value;
+			}
+
+			public TKey getKey(){ return key;}
+			public TValue getValue(){ return value;}
+
+			public int hashCode(){
+				return key.hashCode();
+			}
+			public boolean equals(TKey other){
+				return key.equals(other);
+			}
+			
+		}
+
+		private Set<Entry<TKey, TValue>> entries;
+
+		public HashMap(){
+			entries = new TreeSet<Entry>();
+		}
+		public void put(TKey key, TValue value){
+			Entry<TKey, TValue> entry = new Entry<>(key,value);
+			entries.add(entry);
+		}
+		public Set<Entry<TKey, TValue>> entrySet(){
+			return entries;
+		}
+	}
 	
 		
