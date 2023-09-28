@@ -2,6 +2,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class App {
 
@@ -19,6 +20,19 @@ public class App {
 
 		// TreeSet expects that you have implemented Comparable<Person> interface in
 		// Person class
+
+		System.out.println("1. sort by id\n2. sort by name\n3. sort by salary");
+		System.out.print("\nenter choice: ");
+		Scanner scanner = new Scanner(System.in);
+		int choice = scanner.nextInt();
+		scanner.close();
+
+		// in this case the compare method from PersonComparer class will be called by
+		// TreeSet to sort the elements
+		// TreeSet<Person> setOfPeople = new TreeSet<>(new PersonComparer(choice));
+
+		// in this case the compareTo method from Person class will be called by
+		// TreeSet to sort the elements
 		TreeSet<Person> setOfPeople = new TreeSet<>();
 		setOfPeople.add(sunilPerson);
 		setOfPeople.add(anilPerson);
