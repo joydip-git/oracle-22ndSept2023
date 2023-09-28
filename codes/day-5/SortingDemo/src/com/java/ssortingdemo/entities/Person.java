@@ -50,6 +50,7 @@ public class Person implements Comparable<Person> {
 		if (this == o)
 			return 0;
 		
+		/*
 		if (this.id - o.id == 0)
 			if (this.name.compareTo(o.name) == 0)
 				return (int) (this.salary - o.salary);
@@ -57,5 +58,7 @@ public class Person implements Comparable<Person> {
 				return this.name.compareTo(o.name);
 		else
 			return this.id - o.id;
+			*/
+		return this.name.compareTo(o.name);
 	}
 }

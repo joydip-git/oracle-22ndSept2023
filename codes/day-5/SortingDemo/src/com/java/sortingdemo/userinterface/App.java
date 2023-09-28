@@ -42,7 +42,9 @@ public class App {
 		// interface
 		// because sort method will call compareTo method on one object in the
 		// collection and pass another object as an argument from the collection
-		// Collections.sort(people);
+
+		Collections.sort(people);
+		print(people);
 
 		System.out.println("1. sort by id\n2. sort by name\n3. sort by salary");
 		System.out.print("\nenter choice: ");
@@ -59,7 +61,11 @@ public class App {
 		// PersonComparer comparer = new PersonComparer();
 		PersonComparer comparer = new PersonComparer(choice);
 		Collections.sort(people, comparer);
+		print(people);
 
+	}
+
+	static void print(List<Person> people) {
 		for (Person person : people) {
 			System.out.println(person);
 		}

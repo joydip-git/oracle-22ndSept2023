@@ -1,0 +1,5 @@
+Create a Java application-
+	with a class Customer (id, name, location, mobile)
+	create an UNIQUE collection of Customer objects (at least 3) where the customer objects are sorted by default by mobile number
+	print all the objects from the collection and this time by default the collection should be sorted by customer name
+	

@@ -20,5 +20,43 @@ Sorting:
 		 0: both the objects are same
 		>0: first object is greater than second object
 		<0: second object is greater than first object
+
+
+	How does Set does not allow duplicate items?
+	1. when any element is added to a Set, the Set calculates an unique hash value for that item, by calling hashCode() method of the type
+	2. it preserves the hash value and then when the next element is added then again hash value for that next element is also calculated and then Set checks whether this hash value is same as that of the hash values of previous elements.
+	3. if the hash value is found to be same as that of other element, immediately the Set calls another method, equals() on one element and passes the other element to check whether they are really same or not
+	4. if the equals() method returns true, that means both the elements (old and the new) are same and the new element is not added
+
+	Set<Integer> set = new HashSet<Integer>();
+	set.add(12); //calculates hash code => Integer.hashCode(12);
+	set.add(12); //calculates hash code => Integer.hashCode(12); and it finds the has code is same for old and the new element
+	//checks whether they are same or not => 12.equals(12) => returns true (not added)
+	set.add(13); //calculates hash code => Integer.hashCode(13); => different hash value, hence the element is added. no need to use equals() method.
+
+	Object class's methods hasCode() and equals():
+	hashCode(): 
+		a. if it is primitive type, based on the value
+		b. if it is built-in reference type, based on some value (since hashCode() method is overriden in all built-in types), NOT based on reference
+		c. if it is user-defined reference types,
+			i. if you have not overriden the hashCode(), then hashCode from object class is called, which by default uses reference to calculate hash code
+			ii. if you have overriden the hashCode(), then hashCode from your class is called
+	equals():
+		a. if it is primitive type, based on the value
+		b. if it is built-in reference type, based on some value (since equals() method is overriden in all built-in types), NOT based on reference
+		c. if it is user-defined reference types
+			i. if you have not overriden the equals(), then equals from object class is called, which by default uses reference to check equality
+			ii. if you have overriden the equals(), then equals from your class is called
+
+	TreeSet<T>: 
+	i. similar to HashSet<T>.
+	ii. does not allow to add duplicate elements
+	iii. additionally it will sort the elements.
+	note: for sorting purpose, you have to implement Comparable<T> interface and its method compareTo(T arg0) in the element (T)
+
+
+	Map: HashMap and TreeMap
+	HashMap<Integer,Person> map = new HashMap<>();
+	map.put(62474,sunilPerson);
 	
 		
