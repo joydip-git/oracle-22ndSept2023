@@ -137,5 +137,13 @@
 			return entries;
 		}
 	}
+
+	callback mechanism:
+
+	Method reference: reference to a method
+	Functional Interface: an interface with just ONE AND ONLY ONE abstract method
+	anonymous class
+	anonymous method
+	lambda expression
 	
 		
