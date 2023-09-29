@@ -15,3 +15,17 @@ Nested class:
 class nested within another class is known as nested class
 	- non-static nested class (inner class)
 	- static nested class (are NOT inner class)
+
+Java Functional Interfaces:
+a. Consumer<T>
+
+
+JDBC:
+Java Database Connectivity: provides you required APIs to interact with any database
+Interfaces
+Connection
+Statement
+......
+
+Classes:
+DriverManager etc.
