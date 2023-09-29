@@ -1,0 +1,11 @@
+Method Reference
+Functional Interface
+Anonymous method
+Anonymous Class
+Lambda expression
+
+Reference to a method of a class: Method Reference
+Functional Interface: An interface with just one abstract method
+Anonymous Method: A method without name
+Anonymous Class: class without name
+Lambda expression: a way/an expression to write anonymous method
