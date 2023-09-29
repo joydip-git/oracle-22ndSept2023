@@ -9,3 +9,6 @@ example: use the method to filter only the even numbers from the input list and 
 2. In main() method, create an object of List<Integer> and add some values
 3. call the method created in step-1 from main() and pass this list object as argument and print all filtered numbers (such as, even numbers) from the list returned by the method
 
+4. what will you change in your existing code, if we want to filter only the odd numbers?
+5. Check whether the solution you think of, is sustainable or not and goes against the Oject Oriented Principle - Open Close Principle or not.
+6. Can this issue be resolved using Method Reference technique? Yes

@@ -1,4 +1,3 @@
-
 public class App {
 
 	public static void main(String[] args) {
@@ -54,7 +53,6 @@ public class App {
 		 * DoNotKnowTheName dontKnow = new DoNotKnowTheName(); Invoker anySimilarMethod
 		 * = dontKnow::invoke;
 		 */
-		
 
 		// A. Lambda expression (anonymous method)
 		Invoker randomMethod = (String x) -> {
