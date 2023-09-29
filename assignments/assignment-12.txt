@@ -1,6 +1,7 @@
 Objective: implementation of method reference, functional interface etc.
 
 Create a Java application:
+Part-1:
 1. create a static method after main() method, which accepts List<Integer> as argument and returns List<Integer>.
 purpose of the method is to filter the input List<Integer> and return a new List<Integer> with filtered values
 example: use the method to filter only the even numbers from the input list and return a new list with those even numbers only from the method
