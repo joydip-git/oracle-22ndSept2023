@@ -1,0 +1,5 @@
+Create a functional interface with a method which accepts two integer type values as arguments and returns Integer type value
+
+Create a class with two methods similar to that of the interface method. One should be instance and another should be static.
+
+In main() method use the functional interface to call those two methods of that class
