@@ -33,7 +33,11 @@ public class App {
 		System.out.println(welcomeMessage);
 		System.out.println(message);
 
-		// anonymous class
+		// named inner class of the interface Invoker
+		Invoker.NamedInner namedInner = new Invoker.NamedInner();
+		System.out.println(namedInner.invoke("Ritik"));
+
+		// anonymous inner class of Invoker
 		Invoker anySimilarMethod = new Invoker() {
 
 			@Override
@@ -56,24 +60,16 @@ public class App {
 			return "This is too much, " + x;
 		};
 		/*
-		 * class Unknown{
-		 * 	 public String anonymousMethod(String x){
-		 * 		return "This is too much, " + x;
-		 * 	}
-		 * }
-		 * Unknown unknownObject = new Unknown();
-		 * Invoker randomMethod = unknownObject::anonymousMethod;
+		 * class Unknown{ public String anonymousMethod(String x){ return
+		 * "This is too much, " + x; } } Unknown unknownObject = new Unknown(); Invoker
+		 * randomMethod = unknownObject::anonymousMethod;
 		 * 
 		 * or
 		 * 
-		 * * class Unknown implements Invoker{
-		 * 	 public String invoke(String x){
-		 * 		return "This is too much, " + x;
-		 * 	}
-		 * }
-		 * Unknown unknownObject = new Unknown();
-		 * Invoker randomMethod = unknownObject::invoke;
-		 * */
+		 * * class Unknown implements Invoker{ public String invoke(String x){ return
+		 * "This is too much, " + x; } } Unknown unknownObject = new Unknown(); Invoker
+		 * randomMethod = unknownObject::invoke;
+		 */
 
 		// B. Lambda expression (anonymous method) - without argument's data type and
 		// parenthesis
@@ -81,6 +77,6 @@ public class App {
 
 		System.out.println(randomMethod.invoke("aisiri"));
 		System.out.println(anotherAnonymousMethod.invoke("Bhavna"));
-		
+
 	}
 }

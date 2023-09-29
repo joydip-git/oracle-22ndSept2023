@@ -3,6 +3,14 @@
 @FunctionalInterface
 public interface Invoker {
 	String invoke(String name);
+
+	public class NamedInner implements Invoker {
+
+		@Override
+		public String invoke(String name) {
+			return "Welcome to named inner class of the interface Invoker" + name;
+		}
+	}
 }
 
 //a functional interface, through its method, describes reference of which type of methods can be

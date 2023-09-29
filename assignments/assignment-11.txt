@@ -1,0 +1,4 @@
+Objective: to learn how to use anonymous class for method reference
+Create a Java application: 
+1. Create a functional interface with an abstract method which accepts one integer type value as argument and returns boolean type value
+2. In main() method use the functional interface, created in step-1 to call a method of an anonymous inner class implementing the interface

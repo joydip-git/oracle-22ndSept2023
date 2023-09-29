@@ -1,11 +1,17 @@
 Method Reference
 Functional Interface
 Anonymous method
-Anonymous Class
+Nested and Inner Class and Anonymous Class
 Lambda expression
 
 Reference to a method of a class: Method Reference
 Functional Interface: An interface with just one abstract method
 Anonymous Method: A method without name
-Anonymous Class: class without name
+Anonymous Class: nested (inner) class without name (either nested in another class or another interface)
+
 Lambda expression: a way/an expression to write anonymous method
+
+Nested class:
+class nested within another class is known as nested class
+	- non-static nested class (inner class)
+	- static nested class (are NOT inner class)
