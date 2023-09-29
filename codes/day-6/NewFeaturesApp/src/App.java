@@ -45,6 +45,8 @@ public class App {
 				return "Oh my god " + name + " what have you done????";
 			}
 		};
+		String returnedMessage = anySimilarMethod.invoke("joydip");
+		System.out.println(returnedMessage);
 		/*
 		 * class DoNotKnowTheName implements Invoker{
 		 * 
@@ -52,8 +54,7 @@ public class App {
 		 * DoNotKnowTheName dontKnow = new DoNotKnowTheName(); Invoker anySimilarMethod
 		 * = dontKnow::invoke;
 		 */
-		String returnedMessage = anySimilarMethod.invoke("joydip");
-		System.out.println(returnedMessage);
+		
 
 		// A. Lambda expression (anonymous method)
 		Invoker randomMethod = (String x) -> {

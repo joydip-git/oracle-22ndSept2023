@@ -4,13 +4,13 @@ public interface Shape {
 
 	double getArea();
 
-	public static String getData() {
+	/*public static String getData() {
 		return "data";
 	}
 
 	public default String getMessage() {
 		return "default method in interface";
-	}
+	}*/
 
 	public class SomeShape implements Shape {
 
